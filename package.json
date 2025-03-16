@@ -9,21 +9,18 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:foldamTree.helloWorld"
-  ],
-  "main": "./dist/extension.ts",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "foldamtree.helloWorld",
+        "command": "foldamTree.helloWorld",
         "title": "FoldamTree: Extract Folder Tree"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "foldamtree.helloWorld",
+          "command": "foldamTree.helloWorld",
           "when": "explorerResourceIsFolder",
           "group": "navigation"
         }
@@ -58,7 +55,6 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "foldamtree": "file:",
-    "foldamTree": "file:"
+    "foldamtree": "file:"
   }
 }
