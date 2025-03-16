@@ -78,12 +78,6 @@ If you have suggestions, spot a bug, or want to add new features, please open an
 
 ---
 
-## License
-
-This extension is released under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
----
-
 ## Contact
 
 For support, feedback, or questions, please contact [arpitmohankar](mailto:arpitmohankar28@gmail.com) or open an issue in the repository.
