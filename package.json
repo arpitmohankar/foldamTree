@@ -12,10 +12,10 @@
   ],
   "pricing": "Free",
   "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:foldamTree.helloWorld"
+  ],
   "contributes": {
-    "activationEvents": [
-      "onCommand:foldamTree.helloWorld"
-    ],
     "commands": [
       {
         "command": "foldamTree.helloWorld",

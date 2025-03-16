@@ -1,71 +1,93 @@
-# foldamTree README
+# FoldamTree
 
-This is the README for your extension "foldamTree". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+**FoldamTree** is a Visual Studio Code extension that lets you quickly generate a simple, human-readable folder-file structure of your project. With just a right-click on any folder in the Explorer, you can produce an ASCII tree representation of your folder and file hierarchy!
 
 ---
 
-## Following extension guidelines
+## Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- **Easy Folder Tree Generation:**  
+  Right-click any folder in VS Code, select **FoldamTree: Extract Folder Tree**, and instantly view the structure of that folder in an unsaved text document.
+  
+- **Clear Visual Representation:**  
+  The output displays folder icons and tree connectors so you can easily understand the organization of your project.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+- **Sequential Output Files:**  
+  Each time you run the command, a new unsaved text file (e.g., `FoldTree-Output1.txt`, `FoldTree-Output2.txt`) is created to keep previous outputs intact.
 
-## Working with Markdown
+- **Asynchronous Processing:**  
+  The extension uses asynchronous file system calls to ensure responsiveness, even on moderately sized directories.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+---
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+## Installation & Usage
 
-## For more information
+1. **Installation:**
+   - **From the Marketplace:**  
+     Search for **FoldamTree** in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/) and install it.
+   - **For Developers:**  
+     Clone the repository, make any desired modifications, and run the extension in Debug mode using VS Code.
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+2. **Generating a Folder Tree:**
+   - Open your project in VS Code.
+   - In the Explorer sidebar, right-click the folder you want to analyze.
+   - Select **FoldamTree: Extract Folder Tree** from the context menu.
+   - A new unsaved text file (named sequentially like `FoldTree-Output1.txt`) will open displaying the tree structure.
 
-**Enjoy!**
+3. **Saving the Output:**
+   - The generated text file is unsaved by default.
+   - If you want to keep the file, press `Ctrl+S` (or `Cmd+S` on macOS) and choose your desired location and file type (plain text is recommended).
+
+---
+
+## Requirements
+
+- **Visual Studio Code:**  
+  Version 1.98.0 or higher is required.
+- **Node.js:**  
+  Needed if you plan to build or extend the project yourself.
+
+---
+
+## Extension Settings
+
+Currently, **FoldamTree** does not provide custom settings through VS Code's settings UI. If you wish to change aspects like recursion depth or formatting, you can do so by modifying the source code.
+
+---
+
+## Known Issues
+
+- Processing very large directories (for example, `node_modules`) may result in slower performance.
+- If you experience issues with output or performance, consider reporting them through the project's issue tracker.
+
+---
+
+## Release Notes
+
+### 1.0.0
+- Initial release with folder tree generation.
+- Added right-click command integration in the Explorer sidebar.
+- Implemented sequential naming for output documents.
+
+---
+
+## Contributing
+
+Contributions are welcome!  
+If you have suggestions, spot a bug, or want to add new features, please open an issue or create a pull request on the repository.
+
+---
+
+## License
+
+This extension is released under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+---
+
+## Contact
+
+For support, feedback, or questions, please contact [arpitmohankar](mailto:arpitmohankar28@gmail.com) or open an issue in the repository.
+
+---
+
+*Happy coding, and enjoy using FoldamTree!*
