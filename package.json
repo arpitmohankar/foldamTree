@@ -2,8 +2,9 @@
   "name": "foldamtree",
   "displayName": "FoldamTree",
   "description": "Extract Simple Understandable Folder-File Structure of Project By just Right-Clicking on Explorer Area.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "arpitmohankar",
+  "icon": "src/images/icon.jpg",
   "engines": {
     "vscode": "^1.98.0"
   },
